@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            theme: '#13b6bf',
+            theme2: '#b3e0e4',
+            navy: '#296276'
+          },
+          spacing: {
+              '128': '40rem',
+          },
+        }
+      }
+    }
+  </script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+  
+<nav class="bg-white">
+    <div class="flex flex-wrap items-center justify-between mx-auto px-16 py-8">
+      <a href="#" class="flex items-center">
+          <img src="img/logo.png" class="w-64 mr-3" alt="GDC" />
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class=" w-full md:block md:w-auto" id="navbar-default">
+        <ul class="mr-16 font-medium text-2xl uppercase flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Rankings</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Country Profiles</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Data</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Report</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg-navy h-6"></div>
+  </nav>
+
+  <section class="h-128 bg-cover bg-no-repeat bg-center" style="background-image: url(img/GDC-Introduction.jpg)">
+    
+  </section>
+
+  <section class="flex py-12">
+    <div class="text-right text-navy text-6xl w-1/2 pl-64 pr-12">Better access and improved support for gender data are crucial to achieving gender equality</div>
+    <div class="w-1/2 text-xl pr-24 text-gray-700">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><br>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><br>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+    </div>
+  </section>
+
+  <section class="bg-theme2">
+    <div class="p-16">
+      <h2 class="uppercase text-navy text-4xl font-bold">EXPLORE COUNTRY RESULTS</h2>
+      <div>
+        <select class="my-4 p-4 bg-white text-gray-700 border-0 w-96 text-2xl focus:outline-none">
+          <option value="" selected>Select Country</option>
+        </select>
+      </div>
+      <div class="flex">
+        <div class="w-full">
+          <img src="img/map.jpg" class="w-full" />
+        </div>
+        <div class="w-1/5 px-8">
+            <p class="text-navy text-3xl">Each country score shows the extent to which gender data is available and accessible to infom both citizens and policy-makers.</p>
+            <p class="py-4 text-gray-600 italic">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+      </div>
+      <div class="flex my-8">
+        <div class="w-full bg-white">
+          <div id="container"></div>
+        </div>
+        <div class="w-1/5 px-8">
+            <p class="text-navy text-3xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+      </div>
+      <div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    Highcharts.chart('container', {
+      credits: false,
+      colors: ['#d9e3a9', '#b4c96c', '#f2e9a1', '#fcb941', '#ee7a3b', '#cceaee', '#84d3d9', '#16b5bf'],
+      chart: {
+          type: 'column'
+      },
+      title: {
+          text: '',
+      },
+      xAxis: {
+          categories: ['Arsenal', 'Chelsea', 'Liverpool', 'Manchester United', 'Barcelona', 'Milan'],
+          labels: {
+            formatter () {
+              return `<span style="color: #206778">${this.value}</span>`
+            }
+          }
+      },
+      yAxis: {
+          visible: false,
+          min: 0,
+          title: {
+              text: 'Count trophies'
+          },
+          stackLabels: {
+              enabled: true
+          }
+      },
+      legend: {
+          align: 'left',
+          x: 0,
+          verticalAlign: 'bottom',
+          y: 0,
+          floating: false,
+          backgroundColor:
+          Highcharts.defaultOptions.legend.backgroundColor || 'white',
+          borderColor: '#CCC',
+          borderWidth: 0,
+          shadow: false
+      },
+      tooltip: {
+          headerFormat: '<b>{point.x}</b><br/>',
+          pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+      },
+      plotOptions: {
+          column: {
+              stacking: 'normal',
+              dataLabels: {
+                  enabled: true
+              }
+          }
+      },
+        series: [{
+            name: 'BPL',
+            data: [3, 5, 1, 13, 6, 8]
+        }, {
+            name: 'FA Cup',
+            data: [14, 8, 8, 12, 2, 5]
+        }, {
+            name: 'CL',
+            data: [1, 2, 6, 3, 8, 3]
+        }]
+  });
+
+  </script>
+  
+</body>
+</html>
