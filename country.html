@@ -58,7 +58,7 @@
             <a href="rankings.html" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Rankings</a>
           </li>
           <li>
-            <a href="country.html" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Country Profiles</a>
+            <a href="country.html" class="block py-2 pl-3 pr-4 text-theme rounded md:bg-transparent md:p-0" aria-current="page">Country Profiles</a>
           </li>
           <li>
             <a href="data.html" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Data</a>
@@ -67,7 +67,7 @@
             <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Report</a>
           </li>
           <li>
-            <a href="about-us.html" class="block py-2 pl-3 pr-4 text-theme rounded md:bg-transparent md:p-0" aria-current="page">About us</a>
+            <a href="about-us.html" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">About us</a>
           </li>
         </ul>
       </div>
@@ -79,17 +79,102 @@
   <section class="pb-16">
     <div class="lg:max-w-screen-xl mx-auto">
         <div class="p-8 lg:flex lg:p-12">
-            <div class="lg:w-5/6 pr-8">
-                <h2 class="uppercase text-navy text-xl lg:text-4xl font-bold">ABOUT US</h2>
-                <p class="text-xl text-gray-700 py-4 text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <p class="text-xl text-gray-700 pb-4 text-justify">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis i s l ut aliquip ex ea commodo consequat
-                </p>
+            <div class="lg:w-1/3">
+                <h2 class="uppercase text-navy text-xl lg:text-4xl font-bold">COUNTRY PROFILE</h2>
+                
             </div>
-            <div class="w-auto text-center">
-                <img class="w-64 pt-12" src="img/odw.png">
+            <div class="lg:w-2/3 lg:inline-flex lg:items-center">
+                <select class="p-2 w-full lg:w-80 border lg:ml-auto mr-2 border-gray-500 focus:outline-theme my-4 text-gray-700">
+                    <option>Select Country</option>
+                    <option>Argentina</option>
+                </select>
+                <button class="uppercase py-2 px-4 h-10 bg-theme text-white hover:bg-theme3" type="submit">view results</button>
             </div>
+        </div>
 
+        <div class="px-8 lg:px-12">
+            <h1 class="text-3xl lg:text-6xl font-semibold">Country Name</h1>
+            <div class="grid lg:grid-cols-3 gap-4 mt-8 text-3xl text-gray-700 grid-rows-3 lg:grid-rows-none mb-8">
+                <div class="inline-flex items-center border-b lg:border-b-0 lg:border-r border-navy"><span class="bg-navy text-7xl text-white p-6 mr-4">12</span>OVERALL SCORE</div>
+                <div class="inline-flex items-center border-b lg:border-b-0 lg:border-r border-navy"><span class="text-navy text-7xl font-bold lg:pl-8 mr-4">34</span> GLOBAL RANK<br>out of 100</div>
+                <div class="inline-flex items-center border-b lg:border-b-0 border-navy"><span class="text-navy text-7xl font-bold lg:pl-8 mr-4">67</span> [REGION] RANK<br>out of 100</div>
+            </div>
+            <button class="uppercase p-2 bg-theme text-white text-xl hover:bg-theme3 inline-flex w-full lg:mt-0 lg:w-auto" type="button">
+                download data
+                <svg aria-hidden="true" class="w-8 h-8 ml-auto" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+  </section>
+
+  <div class="lg:max-w-screen-xl mx-auto px-8 lg:px-12">
+    <ul class="flex flex-wrap lg:flex-nowrap text-xl text-center text-gray-700">
+        <li class="mr-2 w-full bg-theme2">
+            <a href="#" aria-current="page" class="block p-4 text-navy font-semibold active uppercase">SUMMARY</a>
+        </li>
+        <li class="mr-2 w-full bg-gray-100">
+            <a href="#" class="block p-4 hover:text-gray-500 uppercase">COVERAGE</a>
+        </li>
+        <li class="mr-2 w-full bg-gray-100">
+            <a href="#" class="block p-4 hover:text-gray-500 uppercase">OPENNESS</a>
+        </li>
+        <li class="mr-2 w-full bg-gray-100">
+            <a href="#" class="block p-4 hover:text-gray-500 uppercase">GOVERNANCE</a>
+        </li>
+        <li class="mr-2 w-full bg-gray-100">
+            <a href="#" class="block p-4 hover:text-gray-500 uppercase">CAPACITY</a>
+        </li>
+        <li class="mr-2 w-full bg-gray-100">
+            <a href="#" class="block p-4 hover:text-gray-500 uppercase">FINANCING</a>
+        </li>
+    </ul>
+  </div>
+
+  <section class="bg-theme4 pb-16">
+        <div class="lg:max-w-screen-xl mx-auto">
+            <div class="px-8 lg:px-12">
+                <div class="text-xl font-semibold text-navy p-8">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<br><br>
+                    Nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros.<br><br>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </div>
+                <div class="p-8">
+                    <img class="w-full" src="img/chart-demo-1.png">
+                </div>
+                <div class="p-8 font-semibold text-navy text-xl">
+                    <span class="text-2xl pb-4 block">RECOMMENDATIONS</span>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl:</p>
+                        <ul class="list-disc pl-12">
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                        </ul>
+                        <br>
+
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl:</p>
+                        <ul class="list-disc pl-12">
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</li>
+                        </ul>
+                        <br>
+
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl:</p>
+                        <ul class="list-disc pl-12">
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </section>
+
+  <section>
+    <div class="lg:max-w-screen-xl text-xl mx-auto">
+        <div class="p-8 lg:p-12">
+            <h2 class="uppercase text-navy text-2xl font-bold pb-4">COUNTRY SUPPORT</h2>
+            <p>In this section we can call attention to support we can offer countries and invite them to reach out to us at<br> <a href="#" class="text-navy font-semibold">GDC-input@opendatawatch.com</a>.</p><br>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
         </div>
     </div>
   </section>
