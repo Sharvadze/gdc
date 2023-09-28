@@ -93,7 +93,7 @@
         </div>
 
         <div class="px-8 lg:px-12">
-            <h1 class="text-3xl lg:text-6xl font-semibold">Country Name</h1>
+            <h1 class="text-3xl lg:text-6xl font-semibold text-gray-700">Country Name</h1>
             <div class="grid lg:grid-cols-3 gap-4 mt-8 text-3xl text-gray-700 grid-rows-3 lg:grid-rows-none mb-8">
                 <div class="inline-flex items-center border-b lg:border-b-0 lg:border-r border-navy"><span class="bg-navy text-7xl text-white p-6 mr-4">12</span>OVERALL SCORE</div>
                 <div class="inline-flex items-center border-b lg:border-b-0 lg:border-r border-navy"><span class="text-navy text-7xl font-bold lg:pl-8 mr-4">34</span> GLOBAL RANK<br>out of 100</div>
@@ -110,31 +110,31 @@
   </section>
 
   <div class="lg:max-w-screen-xl mx-auto px-8 lg:px-12">
-    <ul class="flex flex-wrap lg:flex-nowrap text-xl text-center text-gray-700">
+    <ul id="tabs-nav" class="flex flex-wrap lg:flex-nowrap text-xl text-center text-gray-700">
         <li class="mr-2 w-full bg-theme2">
-            <a href="#" aria-current="page" class="block p-4 text-navy font-semibold active uppercase">SUMMARY</a>
+            <a href="#summary" aria-current="page" class="block p-4 text-navy font-semibold uppercase">SUMMARY</a>
         </li>
         <li class="mr-2 w-full bg-gray-100">
-            <a href="#" class="block p-4 hover:text-gray-500 uppercase">COVERAGE</a>
+            <a href="#coverage" class="block p-4 hover:text-gray-500 uppercase">COVERAGE</a>
         </li>
         <li class="mr-2 w-full bg-gray-100">
-            <a href="#" class="block p-4 hover:text-gray-500 uppercase">OPENNESS</a>
+            <a href="#openness" class="block p-4 hover:text-gray-500 uppercase">OPENNESS</a>
         </li>
         <li class="mr-2 w-full bg-gray-100">
-            <a href="#" class="block p-4 hover:text-gray-500 uppercase">GOVERNANCE</a>
+            <a href="#governance" class="block p-4 hover:text-gray-500 uppercase">GOVERNANCE</a>
         </li>
         <li class="mr-2 w-full bg-gray-100">
-            <a href="#" class="block p-4 hover:text-gray-500 uppercase">CAPACITY</a>
+            <a href="#capacity" class="block p-4 hover:text-gray-500 uppercase">CAPACITY</a>
         </li>
         <li class="mr-2 w-full bg-gray-100">
-            <a href="#" class="block p-4 hover:text-gray-500 uppercase">FINANCING</a>
+            <a href="#financing" class="block p-4 hover:text-gray-500 uppercase">FINANCING</a>
         </li>
     </ul>
   </div>
 
   <section class="bg-theme4 pb-16">
         <div class="lg:max-w-screen-xl mx-auto">
-            <div class="px-8 lg:px-12">
+            <div id="summary" class="tab-content px-8 lg:px-12">
                 <div class="text-xl font-semibold text-navy p-8">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<br><br>
                     Nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros.<br><br>
@@ -163,6 +163,46 @@
                         <ul class="list-disc pl-12">
                             <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="coverage" class="tab-content px-8 lg:px-12 hidden">
+                <div class="lg:flex p-8 pt-12">
+                    <div class="bg-white p-12 pb-8 w-60 text-center">
+                        <span class="text-5xl bg-cyellow1 p-4">12</span>
+                        <span class="text-3xl block mt-8 text-gray-700">COVERAGE SUBSCORE</span>
+                    </div>
+                    <div class="w-full text-2xl font-semibold text-navy pt-4 lg:pl-12 lg:pt-0">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                        <div class="block pt-4">
+                            <div class="inline-flex border-b lg:border-b-0 lg:border-r border-navy text-gray-700 text-base font-normal pr-8"><span class="text-navy text-4xl font-bold mr-4">34</span> GLOBAL COVERAGE RANK<br>out of 100</div>
+                            <div class="inline-flex items-center border-b lg:border-b-0 border-navy text-gray-700 text-base font-normal lg:pl-8 pt-4 lg:pt-0"><span class="text-navy text-4xl font-bold mr-4">67</span> [REGION] COVERAGE RANK<br>out of 100</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h2 class="text-navy text-2xl font-bold pb-4">Where are the gender data gaps?</h2>
+                    <div class="py-4">
+                        <img class="w-full" src="img/chart-demo-2.png">
+                    </div>
+                    <h2 class="text-navy text-2xl font-bold pt-12 pb-4">Which datasets are available?</h2>
+                    <div class="py-4 lg:flex">
+                        <div class="lg:w-1/2">
+                            <img src="img/chart-demo-3.png" class="w-full">
+                        </div>
+                        <div class="lg:w-1/2 text-navy text-xl lg:pl-12">
+                            <p class="pt-4 lg:pt-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+                            <select class="p-2 focus:outline-theme my-4 block w-full text-gray-700">
+                                <option>All data categories</option>
+                                <option>First</option>
+                            </select>
+
+                            <button class="mt-4 uppercase py-2 px-4 bg-theme text-white text-xl hover:bg-theme3" type="submit">view results</button>
+
+                            <p class="py-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,</p>
+                            <p class="font-bold">List of indicators: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -201,6 +241,25 @@
     <div class="px-8 lg:px-0 lg:text-right pb-12 text-white">Please cite any use of this data as: Open Data Watch. 2023. Gender Data Compass. www.OpenDataWatch.com</div>
   </div>
   </footer> 
+
+
+  <script>
+    $('#tabs-nav li').click(function(){
+        $('#tabs-nav li').removeClass('bg-theme2');
+        $('#tabs-nav li a').removeClass('text-navy font-semibold');
+        $('#tabs-nav li a').addClass('hover:text-gray-500');
+
+        $(this).children(":first").removeClass('hover:text-gray-500');
+        $(this).addClass('bg-theme2');
+        $(this).children(":first").addClass('text-navy font-semibold');
+        
+        $('.tab-content').addClass('hidden');
+        let tab = $(this).find('a').attr('href');
+        $(tab).removeClass('hidden').addClass('block');
+
+        return false;
+    });
+  </script>
   
 </body>
 </html>
