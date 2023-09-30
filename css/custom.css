@@ -1,0 +1,6 @@
+
+    select {
+        background: url(../img/arrow-d.png) no-repeat right;
+        -webkit-appearance: none;
+        background-position-x: 97%;
+    }
