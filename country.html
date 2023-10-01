@@ -90,7 +90,7 @@
                     <option>Select Country</option>
                     <option>Argentina</option>
                 </select>
-                <button class="uppercase py-2 px-4 h-10 bg-theme text-white hover:bg-theme3" type="submit">view results</button>
+                <button class="uppercase p-2 bg-theme text-xl text-white hover:bg-theme3" type="submit">view results</button>
             </div>
         </div>
 
@@ -171,8 +171,8 @@
             <div id="coverage" class="tab-content px-8 lg:px-12 py-20 hidden">
                 <div class="lg:flex px-8">
                     <div class="bg-white p-8 w-60 text-center">
-                        <span class="text-5xl bg-cyellow1 block mx-auto w-24 mt-4 p-4">12</span>
-                        <span class="text-3xl block mt-8 text-gray-700">COVERAGE SUBSCORE</span>
+                        <span class="text-5xl bg-cyellow1 block mx-auto w-24 mt-2 p-4">12</span>
+                        <span class="text-3xl block mt-4 text-gray-700">COVERAGE SUBSCORE</span>
                     </div>
                     <div class="w-full text-2xl font-semibold text-navy pt-4 lg:pl-12 lg:pt-0">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
@@ -195,7 +195,7 @@
                         <div class="lg:w-1/2 text-navy text-xl lg:pl-12">
                             <p class="pt-4 lg:pt-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 
-                            <select class="p-2 focus:outline-theme my-4 block w-full text-gray-700">
+                            <select class="p-2 bg-white focus:outline-theme my-4 block w-full text-gray-700">
                                 <option>All data categories</option>
                                 <option>First</option>
                             </select>
@@ -208,6 +208,48 @@
                     </div>
                 </div>
             </div>
+
+            <div id="openness" class="tab-content px-8 lg:px-12 py-20 hidden">
+                <div class="lg:flex px-8">
+                    <div class="bg-white p-8 w-60 text-center">
+                        <span class="text-5xl bg-cgreen2 block mx-auto w-24 mt-2 p-4">21</span>
+                        <span class="text-3xl block mt-4 text-gray-700">OPENNESS SUBSCORE</span>
+                    </div>
+                    <div class="w-full text-2xl font-semibold text-navy pt-4 lg:pl-12 lg:pt-0">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                        <div class="block pt-4">
+                            <div class="inline-flex items-center border-b lg:border-b-0 lg:border-r border-navy text-gray-700 text-base font-normal pr-8 mb-4"><span class="text-navy text-4xl font-bold mr-4">31</span> GLOBAL OPENNESS RANK<br>out of 100</div>
+                            <div class="inline-flex items-center border-b lg:border-b-0 border-navy text-gray-700 text-base font-normal lg:pl-8 lg:pt-0"><span class="text-navy text-4xl font-bold mr-4 -mt-1 lg:-mt-0">43</span> [REGION] OPENNESS RANK<br>out of 100</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-8 pt-8">
+                    <h2 class="text-navy text-2xl font-bold pb-4">Where are the gender data gaps?</h2>
+                    <div class="py-4">
+                        <img class="w-full" src="img/chart-demo-2.png">
+                    </div>
+                    <h2 class="text-navy text-2xl font-bold pt-12 pb-4">Which datasets are available?</h2>
+                    <div class="py-4 lg:flex">
+                        <div class="lg:w-1/2">
+                            <img src="img/chart-demo-3.png" class="w-full">
+                        </div>
+                        <div class="lg:w-1/2 text-navy text-xl lg:pl-12">
+                            <p class="pt-4 lg:pt-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+                            <select class="p-2 bg-white focus:outline-theme my-4 block w-full text-gray-700">
+                                <option>All data categories</option>
+                                <option>First</option>
+                            </select>
+
+                            <button class="mt-4 uppercase py-2 px-4 bg-theme text-white text-xl hover:bg-theme3" type="submit">view results</button>
+
+                            <p class="py-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,</p>
+                            <p class="font-bold">List of indicators: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
   </section>
 
@@ -225,12 +267,12 @@
   <footer class="bg-navy text-sm">
     <div class="lg:max-w-screen-xl mx-auto">
     <div class="lg:flex py-4">
-      <div class="px-8 lg:w-1/2 lg:px-12 lg:flex">
+      <div class="px-8 lg:w-1/2 lg:px-0 lg:flex">
         <span class="pt-2"><img class="w-16" src="img/odw.png"></span>
         <div class="lg:pl-8 pt-2 text-white">
           Contact us at: <br>
-          <a href="#" class="text-theme hover:text-theme3">GDC-input@opendatawatch.com</a>
-          <span class="block pt-2"><a href="#" class="text-theme hover:text-theme3">Subscribe to our newsletter</a> for gender data insights.</span>
+          <a href="#" class="text-theme2 hover:text-theme">GDC-input@opendatawatch.com</a>
+          <span class="block pt-2"><a href="#" class="text-theme2 hover:text-theme3">Subscribe to our newsletter</a> for gender data insights.</span>
         </div>
       </div>
 
