@@ -1,202 +1,273 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Gender Data Compass</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            theme: '#13b6bf',
-            theme2: '#b3e0e4',
-            theme3: '#18c7d2',
-            theme4: '#cceaee',
-            navy: '#296276',
-            cgreen1: '#b4c96c',
-            cgreen2: '#d9e3a9',
-            cyellow1: '#f2e9a1',
-            cyellow2: '#fcb941',
-            corange: '#ed7d34',
-
+  <head>
+    <title>Gender Data Compass</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              theme: "#13b6bf",
+              theme2: "#b3e0e4",
+              theme3: "#18c7d2",
+              theme4: "#cceaee",
+              navy: "#296276",
+              cgreen1: "#b4c96c",
+              cgreen2: "#d9e3a9",
+              cyellow1: "#f2e9a1",
+              cyellow2: "#fcb941",
+              corange: "#ed7d34",
+            },
+            spacing: {
+              128: "40rem",
+            },
           },
-          spacing: {
-              '128': '40rem',
-          },
-        }
-      }
-    }
-  </script>
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script
-			  src="https://code.jquery.com/jquery-3.7.1.min.js"
-			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-			  crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/custom.css">      
-</head>
-<body>
-
-
-<nav class="bg-white">
-    <div class="flex flex-wrap items-center justify-between mx-auto px-2 md:px-16 py-4">
-      <a href="#" class="flex items-center">
+        },
+      };
+    </script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
+    <nav class="bg-white">
+      <div class="flex flex-wrap items-center justify-between mx-auto px-2 md:px-16 py-4">
+        <a href="#" class="flex items-center">
           <img src="img/logo.png" class="w-48 mr-3" alt="GDC" />
-      </a>
-      <button onclick="document.getElementById('navbar-default').classList.toggle('hidden')" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+        </a>
+        <button
+          onclick="document.getElementById('navbar-default').classList.toggle('hidden')"
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
           <span class="sr-only">Open main menu</span>
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
           </svg>
-      </button>
-      <div class="hidden w-full lg:block lg:w-auto" id="navbar-default">
-        <ul class="font-medium text-base uppercase flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 ">
-          <li>
-            <a href="index.html" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="rankings.html" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Rankings</a>
-          </li>
-          <li>
-            <a href="country.html" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Country Profiles</a>
-          </li>
-          <li>
-            <a href="data.html" class="block py-2 pl-3 pr-4 text-theme rounded md:bg-transparent md:p-0" aria-current="page">Data</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Report</a>
-          </li>
-          <li>
-            <a href="about-us.html" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">About us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="bg-navy h-6"></div>
-  </nav>
-
-
-  <section class="pb-16">
-    <div class="lg:max-w-screen-xl mx-auto">
-    <div class="p-8 lg:p-12">
-      <h2 class="uppercase text-navy text-xl lg:text-4xl font-bold">DATA DOWNLOAD</h2>
-      <p class="text-xl text-gray-700 py-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      <p class="text-xl text-gray-700 pb-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-      <p class="text-xl text-navy font-bold pb-4">1. Select countries:</p>
-      <div>
-        <div class="w-60 border">
-            <div class="p-3">
-              <label for="input-group-search" class="sr-only">Search</label>
-              <div class="relative">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                </svg>
-                </div>
-                <input type="text" id="input-group-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="Search">
-              </div>
-            </div>
-            <ul class="h-48 px-3 pb-3 overflow-y-auto text-sm text-gray-700" aria-labelledby="dropdownSearchButton">
-              <li>
-                <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
-                  <input id="checkbox-item-1" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
-                  <label for="checkbox-item-1" class="w-full ml-2 font-medium rounded">Afghanistan</label>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
-                  <input id="checkbox-item-2" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
-                  <label for="checkbox-item-2" class="w-full ml-2 font-medium rounded">Albania</label>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
-                  <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
-                  <label for="checkbox-item-3" class="w-full ml-2 font-medium rounded">Algeria</label>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
-                  <input id="checkbox-item-4" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
-                  <label for="checkbox-item-4" class="w-full ml-2 font-medium rounded">Andorra</label>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
-                  <input id="checkbox-item-5" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
-                  <label for="checkbox-item-5" class="w-full ml-2 font-medium rounded">Angola</label>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
-                  <input id="checkbox-item-6" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
-                  <label for="checkbox-item-6" class="w-full ml-2 font-medium rounded">Antigua and Barbuda</label>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
-                  <input id="checkbox-item-7" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
-                  <label for="checkbox-item-7" class="w-full ml-2 font-medium rounded">Argentina</label>
-                </div>
-              </li>
-             
-            </ul>
-            
+        </button>
+        <div class="hidden w-full lg:block lg:w-auto" id="navbar-default">
+          <ul
+            class="font-medium text-base uppercase flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0"
+          >
+            <li>
+              <a href="index.html" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="rankings.html" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page"
+                >Rankings</a
+              >
+            </li>
+            <li>
+              <a href="country.html" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page"
+                >Country Profiles</a
+              >
+            </li>
+            <li>
+              <a href="data.html" class="block py-2 pl-3 pr-4 text-theme rounded md:bg-transparent md:p-0" aria-current="page">Data</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page">Report</a>
+            </li>
+            <li>
+              <a href="about-us.html" class="block py-2 pl-3 pr-4 text-gray-500 hover:text-theme rounded md:bg-transparent md:p-0" aria-current="page"
+                >About us</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
+      <div class="bg-navy h-6"></div>
+    </nav>
 
-      <div class="py-8">
-        <p class="text-xl text-navy font-bold pb-4">2. Select output format:</p>
-        <div class="flex gap-x-6">
-            <div class="flex">
-              <input type="radio" name="hs-radio-group" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500" id="hs-radio-group-1" checked>
-              <label for="hs-radio-group-1" class="text-gray-700 ml-2">Excel</label>
-            </div>
-          
-            <div class="flex">
-              <input type="radio" name="hs-radio-group" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500" id="hs-radio-group-2">
-              <label for="hs-radio-group-2" class="text-gray-700 ml-2">CSV</label>
-            </div>
-          
-            <div class="flex">
-              <input type="radio" name="hs-radio-group" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500" id="hs-radio-group-3">
-              <label for="hs-radio-group-3" class="text-gray-700 ml-2">JSON</label>
+    <section class="pb-16">
+      <div class="lg:max-w-screen-xl mx-auto">
+        <div class="p-8 lg:p-12">
+          <h2 class="uppercase text-navy text-xl lg:text-4xl font-bold">DATA DOWNLOAD</h2>
+          <p class="text-xl text-gray-700 py-4">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+            1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
+            also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+            containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+          <p class="text-xl text-gray-700 pb-4">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          </p>
+          <p class="text-xl text-navy font-bold pb-4">1. Select countries:</p>
+          <div>
+            <div class="w-60 border">
+              <div class="p-3">
+                <label for="input-group-search" class="sr-only">Search</label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    id="input-group-search"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+                    placeholder="Search"
+                  />
+                </div>
+              </div>
+              <ul class="h-48 px-3 pb-3 overflow-y-auto text-sm text-gray-700" aria-labelledby="dropdownSearchButton">
+                <li>
+                  <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
+                    <input
+                      id="checkbox-item-1"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <label for="checkbox-item-1" class="w-full ml-2 font-medium rounded">Afghanistan</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
+                    <input
+                      id="checkbox-item-2"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <label for="checkbox-item-2" class="w-full ml-2 font-medium rounded">Albania</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
+                    <input
+                      id="checkbox-item-3"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <label for="checkbox-item-3" class="w-full ml-2 font-medium rounded">Algeria</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
+                    <input
+                      id="checkbox-item-4"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <label for="checkbox-item-4" class="w-full ml-2 font-medium rounded">Andorra</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
+                    <input
+                      id="checkbox-item-5"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <label for="checkbox-item-5" class="w-full ml-2 font-medium rounded">Angola</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
+                    <input
+                      id="checkbox-item-6"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <label for="checkbox-item-6" class="w-full ml-2 font-medium rounded">Antigua and Barbuda</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center p-2 rounded hover:bg-theme hover:text-white">
+                    <input
+                      id="checkbox-item-7"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <label for="checkbox-item-7" class="w-full ml-2 font-medium rounded">Argentina</label>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
 
-          <button class="uppercase p-2 bg-theme text-white text-xl hover:bg-theme3 inline-flex w-full mt-8 lg:w-auto" type="button">
-            download data
-          </button>
+          <div class="py-8">
+            <p class="text-xl text-navy font-bold pb-4">2. Select output format:</p>
+            <div class="flex gap-x-6">
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="hs-radio-group"
+                  class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500"
+                  id="hs-radio-group-1"
+                  checked
+                />
+                <label for="hs-radio-group-1" class="text-gray-700 ml-2">Excel</label>
+              </div>
 
-      </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="hs-radio-group"
+                  class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500"
+                  id="hs-radio-group-2"
+                />
+                <label for="hs-radio-group-2" class="text-gray-700 ml-2">CSV</label>
+              </div>
 
-    </div>
-  </div>
-  </section>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="hs-radio-group"
+                  class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500"
+                  id="hs-radio-group-3"
+                />
+                <label for="hs-radio-group-3" class="text-gray-700 ml-2">JSON</label>
+              </div>
+            </div>
 
-
-  <footer class="bg-navy text-sm">
-    <div class="lg:max-w-screen-xl mx-auto">
-    <div class="lg:flex py-4">
-      <div class="px-8 lg:w-1/2 lg:px-0 lg:flex">
-        <span class="pt-2"><img class="w-16" src="img/odw.png"></span>
-        <div class="lg:pl-8 pt-2 text-white">
-          Contact us at: <br>
-          <a href="#" class="text-theme2 hover:text-theme">GDC-input@opendatawatch.com</a>
-          <span class="block pt-2"><a href="#" class="text-theme2 hover:text-theme3">Subscribe to our newsletter</a> for gender data insights.</span>
+            <button class="uppercase p-2 bg-theme text-white text-xl hover:bg-theme3 inline-flex w-full mt-8 lg:w-auto" type="button">download data</button>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="pl-8 lg:w-1/2 pt-4 lg:pl-12 lg:flex">
-        <span class="text-white lg:pl-36 lg:text-right">©2023 OpenDataWatch - Licensed under a Creative Commons Attribution 4.0 license</span>
-        <span class="block lg:pl-2 pt-1"><img class="w-32" src="img/cc.png"></span>
+    <footer class="bg-navy text-sm">
+      <div class="lg:max-w-screen-xl mx-auto">
+        <div class="lg:flex py-4">
+          <div class="px-8 lg:w-1/2 lg:px-0 lg:flex">
+            <span class="pt-2"><img class="w-16" src="img/odw.png" /></span>
+            <div class="lg:pl-8 pt-2 text-white">
+              Contact us at: <br />
+              <a href="#" class="text-theme2 hover:text-theme">GDC-input@opendatawatch.com</a>
+              <span class="block pt-2"><a href="#" class="text-theme2 hover:text-theme3">Subscribe to our newsletter</a> for gender data insights.</span>
+            </div>
+          </div>
+
+          <div class="pl-8 lg:w-1/2 pt-4 lg:pl-12 lg:flex">
+            <span class="text-white lg:pl-36 lg:text-right">©2023 OpenDataWatch - Licensed under a Creative Commons Attribution 4.0 license</span>
+            <span class="block lg:pl-2 pt-1"><img class="w-32" src="img/cc.png" /></span>
+          </div>
+        </div>
+
+        <div class="px-8 lg:px-0 lg:text-right pb-12 text-white">
+          Please cite any use of this data as: Open Data Watch. 2023. Gender Data Compass. www.OpenDataWatch.com
+        </div>
       </div>
-  </div>
-
-    <div class="px-8 lg:px-0 lg:text-right pb-12 text-white">Please cite any use of this data as: Open Data Watch. 2023. Gender Data Compass. www.OpenDataWatch.com</div>
-  </div>
-  </footer> 
-  
-</body>
+    </footer>
+  </body>
 </html>
