@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <script>
       tailwind.config = {
         theme: {
@@ -36,6 +37,7 @@
     </script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <link rel="stylesheet" href="css/custom.css" />
   </head>
   <body>
@@ -341,16 +343,25 @@
               <div class="p-4 text-right">
                 <ul class="list-none inline-flex uppercase text-sm pr-8">
                   <li class="text-center">
-                    <div class="w-16 h-6 bg-gray-100"></div>
-                    None
+                    <div data-tooltip-target="tooltip-1" class="w-16 h-6 bg-gray-100"></div>
+                    <div id="tooltip-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        None
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
                   </li>
                   <li class="text-center">
-                    <div class="w-16 h-6 bg-cteal3"></div>
-                    Low
+                    <div data-tooltip-target="tooltip-2" class="w-16 h-6 bg-cteal3"></div>
+                    <div id="tooltip-2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        Low
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
                   </li>
                   <li class="text-center">
-                    <div class="w-16 h-6 bg-cteal1"></div>
-                    High
+                    <div data-tooltip-target="tooltip-3" class="w-16 h-6 bg-cteal1"></div>
+                    <div id="tooltip-3" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        High
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
                   </li>
                 </ul>
               </div>
