@@ -98,7 +98,19 @@
           <p class="text-xl text-gray-700 pb-4">
             For more information on the calculation of the scores, see the Gender Data Compass Methodology Guide.
           </p>
-          <p class="text-xl text-navy font-bold pb-4">1. Select countries:</p>
+          
+          <div class="py-8">
+            <p class="text-xl text-navy font-bold pb-4">1. Do you want to download scores or dataset information?</p>
+            <div class="block">
+              <input name="hs-group" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500" id="hs-group-1" type="radio"> <label for="hs-group-1" class="text-gray-700 ml-2">Scores</label>
+            </div>
+            <div class="block">
+              <input name="hs-group" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500" id="hs-group-2" type="radio"> <label for="hs-group-2" class="text-gray-700 ml-2">Dataset information <span class="italic text-gray-400">(information about each dataset found for each indicator)</span></label>
+            </div>
+          </div>
+
+
+          <p class="text-xl text-navy font-bold pb-4">2. Select countries:</p>
           <div>
             <div class="w-60 border">
               <div class="p-3">
@@ -206,41 +218,36 @@
           </div>
 
           <div class="py-8">
-            <p class="text-xl text-navy font-bold pb-4">2. Select output format:</p>
-            <div class="flex gap-x-6">
-              <div class="flex">
-                <input
-                  type="radio"
-                  name="hs-radio-group"
-                  class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500"
-                  id="hs-radio-group-1"
-                  checked
-                />
-                <label for="hs-radio-group-1" class="text-gray-700 ml-2">Excel</label>
-              </div>
-
-              <div class="flex">
-                <input
-                  type="radio"
-                  name="hs-radio-group"
-                  class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500"
-                  id="hs-radio-group-2"
-                />
-                <label for="hs-radio-group-2" class="text-gray-700 ml-2">CSV</label>
-              </div>
-
-              <div class="flex">
-                <input
-                  type="radio"
-                  name="hs-radio-group"
-                  class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500"
-                  id="hs-radio-group-3"
-                />
-                <label for="hs-radio-group-3" class="text-gray-700 ml-2">JSON</label>
-              </div>
+            <p class="text-xl text-navy font-bold pb-4">3. Select score type:</p>
+            <div class="block">
+              <input name="hs-group2" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500" id="hs-group2-1" type="radio"> <label for="hs-group2-1" class="text-gray-700 ml-2">Raw Scores</label>
             </div>
+            <div class="block">
+              <input name="hs-group2" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500" id="hs-group2-2" type="radio"> <label for="hs-group2-2" class="text-gray-700 ml-2">Standard Scores <span class="italic text-gray-400">(weighted scores as shown on website)</span></label>
+            </div>
+          </div>
 
-            <button class="uppercase p-2 bg-theme text-white text-xl hover:bg-theme3 inline-flex w-full mt-8 lg:w-auto" type="button">download data</button>
+          <div class="pb-8">
+            <p class="text-xl text-navy font-bold pb-4">4. Select which data to include:</p>
+            <div class="block">
+              <input name="hs-group3" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500" id="hs-group3-1" type="radio"> <label for="hs-group3-1" class="text-gray-700 ml-2">Category Scores</label>
+            </div>
+            <div class="block">
+              <input name="hs-group3" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500" id="hs-group3-2" type="radio"> <label for="hs-group3-2" class="text-gray-700 ml-2">Indicator and Category Scores</label>
+            </div>
+          </div>
+
+          <div class="pb-8">
+            <p class="text-xl text-navy font-bold pb-4">5. Select output format:</p>
+            <div class="block">
+              <input name="hs-group4" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500" id="hs-group4-1" type="radio"> <label for="hs-group4-1" class="text-gray-700 ml-2">XLSX</label>
+            </div>
+            <div class="block">
+              <input name="hs-group4" class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500" id="hs-group4-2" type="radio"> <label for="hs-group4-2" class="text-gray-700 ml-2">CSV</label>
+            </div>
+          </div>
+
+            <button class="uppercase py-2 px-4 bg-theme text-white text-xl hover:bg-theme3 inline-flex mt-8 lg:w-auto" type="button">download data</button>
           </div>
         </div>
       </div>
