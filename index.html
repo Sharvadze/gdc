@@ -28,7 +28,9 @@
               bluelight: '#e1f3f5'
             },
             spacing: {
-              100: "24rem",
+              114: "36rem",
+              128: "40rem",
+              132: "48rem",
             },
           },
         },
@@ -88,20 +90,14 @@
           </ul>
         </div>
       </div>
-      <div class="bg-navy h-6"></div>
+      <!--<div class="bg-navy h-6"></div>-->
     </nav>
 
-    <section class="h-96 w-full object-cover bg-cover bg-no-repeat bg-center" style="background-image: url(img/GDC-Home-Page-Banner-Background-Placeholder.jpg)">
-      <div class="lg:flex">
-        <div class="lg:w-1/2">
-          <img id="hero" src="img/banner2.png" class="object-contain opacity-50 h-96 -left-64 absolute lg:pl-36">
-        </div>
-        <div class="lg:w-1/2 lg:mr-56 mr-12 text-right relative ">
-          <div id="text1" class="lg:mt-16 mt-44 -right-12 absolute bg-corange uppercase text-white px-4 py-2 text-base lg:text-2xl max-w-fit ml-auto">Charting a Course for Gender Data</div>
-          <div id="text2" class="lg:pt-6 pt-32 -right-4 opacity-0 top-28 absolute leading-snug subpixel-antialiased tracking-wide uppercase text-2xl lg:text-5xl font-semibold text-white">major data gaps remain<br> for gender equality</div>
-          <div id="text3" class="pt-16 lg:pt-0 absolute top-80 opacity-0 right-0"><button class="mt-8 uppercase py-2 px-4 bg-theme text-white text-xl hover:bg-theme3" type="button">read the full report</button></div>
-        </div>
-        
+    <section class="h-60 lg:h-114 w-full object-cover bg-cover bg-no-repeat bg-center" style="background-image: url(img/GDC-Home-Banner.jpg)">
+      <div class="lg:mr-56 mr-4 pt-6 lg:pt-32 text-right">
+        <div id="text1" class="opacity-0 bg-corange uppercase text-white px-4 py-2 text-base lg:text-2xl max-w-fit ml-auto">Charting a Course for Gender Data</div>
+        <div id="text2" class="lg:pt-6 pt-4 opacity-0 leading-snug subpixel-antialiased tracking-wide uppercase text-2xl lg:text-5xl font-semibold text-white">major data gaps exist<br> for gender equality</div>
+        <div id="text3" class="opacity-0"><button class="mt-4 lg:mt-8 uppercase py-2 px-4 bg-theme text-white text-xl hover:bg-theme3" type="button">read full report</button></div>
       </div>
     </section>
 
@@ -311,10 +307,10 @@
     </footer>
 
     <script>
-      $("#hero").animate({left: '0px', opacity: 1,}, 'slow');
-      $("#text1").animate({right: '0px', opacity: 1,}, 'slow');
-      $("#text2").animate({right: '0px', opacity: 1,}, 'slow');
-      $("#text3").animate({top: '230px', opacity: 1,}, 'slow');
+      $("#hero").animate({opacity: 1,}, 'slow');
+      $("#text1").animate({opacity: 1,}, 'slow');
+      $("#text2").animate({opacity: 1,}, 'slow');
+      $("#text3").animate({opacity: 1,}, 'slow');
 
     </script>
   </body>
