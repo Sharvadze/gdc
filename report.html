@@ -90,16 +90,23 @@
           </ul>
         </div>
       </div>
-      <div class="bg-navy h-6"></div>
     </nav>
 
-    <section class="h-112 lg:h-132 w-full bg-cover bg-no-repeat bg-center text-right" style="background-image: url(img/GDC-Report-Banner.jpg)">
+    <section class="h-112 lg:h-132 w-full bg-cover bg-no-repeat bg-center text-center relative" style="background-image: url(img/GDC-Report-Banner-bg.jpg)">
+
+      <div class="uppercase text-white font-bold text-4xl pt-16">
+        <span class="px-6 py-3 bg-corange">2023 report</span>
+        <div class="mx-auto w-64 md:w-80 lg:w-112 pt-16">
+          <img class="w-full" src="img/GDC Logo tr.png">
+        </div>
+      </div>
+
       <button
         id="report-menu"
         onclick="document.getElementById('navbar-report').classList.toggle('hidden'); document.getElementById('report-menu').classList.toggle('hidden');"
         data-collapse-toggle="navbar-report"
         type="button"
-        class="inline-flex items-center p-2 w-16 h-16 justify-center text-sm text-navy rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 mr-2 mt-2"
+        class="right-2 top-2 absolute inline-flex items-center p-2 w-16 h-16 justify-center text-sm text-navy rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 mr-2 mt-2"
         aria-controls="navbar-report"
         aria-expanded="false"
       >
@@ -113,7 +120,7 @@
         <div class="block">
           <button
             onclick="document.getElementById('navbar-report').classList.toggle('hidden'); document.getElementById('report-menu').classList.toggle('hidden');"
-            class="ml-auto"
+            class="float-right"
           >
             <svg
               aria-hidden="true"
@@ -247,7 +254,7 @@
               <h2 class="text-2xl font-bold">Figure 3: Average scores for the five dimensions, 2023</h2>
 
               <div class="bg-white pb-4">
-                <div class="flex grid grid-cols-2 lg:grid-cols-5 justify-items-center gap-12 p-12 pb-6" id="container">
+                <div class="flex grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-items-center gap-12 p-12 pb-6" id="container">
                   <div class="flex flex-col flex-nowrap justify-end w-20 h-64 bg-gray-200 overflow-hidden">
                     <div class="bg-cyellow1 overflow-hidden text-gray-700 flex items-center" role="progressbar" style="height: 49%" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"><span class="w-full text-center">49%</span></div>
                     <span class="bg-white pt-4 block text-center text-navy text-sm">Availability</span>
