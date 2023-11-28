@@ -34,6 +34,7 @@
     </script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <link rel="stylesheet" href="css/custom.css" />
   </head>
   <body>
@@ -104,7 +105,7 @@
               </select>
             </div>
             <div class="lg:w-1/2 lg:text-right">
-              <button class="uppercase py-2 pl-5 px-4 bg-theme text-white text-xl hover:bg-theme3 inline-flex w-full mt-4 lg:mt-0 lg:w-auto" type="button">
+              <button data-dropdown-toggle="dropdown" class="uppercase py-2 pl-5 px-4 bg-theme text-white text-xl hover:bg-theme3 inline-flex w-full mt-4 lg:mt-0 lg:w-auto" type="button">
                 download data
                 <svg
                   aria-hidden="true"
@@ -118,6 +119,16 @@
                   <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </button>
+              <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-200 shadow w-56">
+                <ul class="text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Excel</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">CSV</a>
+                  </li>
+                </ul>
+            </div>
             </div>
           </div>
 
