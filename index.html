@@ -127,7 +127,7 @@
           <div class="lg:flex my-8">
             <div class="w-full">
               <div class="bg-white pb-4">
-                <div class="flex grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 justify-items-center gap-12 p-12 pb-6" id="container">
+                <div class="flex grid grid-cols-3 lg:grid-cols-6 justify-items-center gap-12 p-12 pb-6">
                   <div class="flex flex-col flex-nowrap justify-end w-20 h-72 bg-gray-200 overflow-hidden">
                     <div class="bg-cgreen2 overflow-hidden text-gray-700 flex items-center" role="progressbar" style="height: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><span class="w-full text-center">65%</span></div>
                     <span class="bg-white pt-4 block text-center text-navy text-sm">Overall</span>
@@ -142,6 +142,33 @@
                     <div class="bg-cgreen2 overflow-hidden text-gray-700 flex items-center" role="progressbar" style="height: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><span class="w-full text-center">65%</span></div>
                     <span class="bg-white pt-4 block text-center text-navy text-sm">Openness</span>
                   </div>
+
+                  <div class="col-span-3 w-full lg:hidden">
+                    <ul class="list-none flex uppercase text-sm lg:pl-12 pb-10 lg:pb-0">
+                      <li class="text-left w-1/5">
+                        <div class="lg:w-20 h-6 bg-corange"></div>
+                        0
+                      </li>
+                      <li class="text-left w-1/5">
+                        <div class="lg:w-20 h-6 bg-cyellow2"></div>
+                        <span class="-ml-2">20</span>
+                      </li>
+                      <li class="text-left w-1/5">
+                        <div class="lg:w-20 h-6 bg-cyellow1"></div>
+                        <span class="-ml-2">40</span>
+                      </li>
+                      <li class="text-left w-1/5">
+                        <div class="lg:w-20 h-6 bg-cgreen2"></div>
+                        <span class="-ml-2">60</span>
+                      </li>
+                      <li class="text-left w-1/5">
+                        <div class="lg:w-20 h-6 bg-cgreen1"></div>
+                        <span class="-ml-2">80</span>
+                        <div class="float-right">100</div>
+                      </li>
+                    </ul>
+                  </div>
+
 
                   <div class="flex flex-col flex-nowrap justify-end w-20 h-72 bg-gray-200 overflow-hidden">
                     <div class="flex flex-col justify-center overflow-hidden text-center text-gray-700 bg-cteal1" role="progressbar" style="height: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
@@ -166,48 +193,49 @@
                 </div>
 
                 <div class="p-4 lg:flex">
-                  <div class="lg:w-2/3">
-                    <ul class="list-none inline-flex uppercase text-sm lg:pl-12 pb-10 lg:pb-0">
-                      <li class="text-left">
-                        <div class="w-16 lg:w-20 h-6 bg-corange"></div>
+                  <div class="lg:w-1/2 hidden lg:block">
+                    <ul class="list-none flex uppercase text-sm lg:pl-12 pb-10 lg:pb-0 px-10">
+                      <li class="text-left w-1/5">
+                        <div class="lg:w-20 h-6 bg-corange"></div>
                         0
                       </li>
-                      <li class="text-left">
-                        <div class="w-16 lg:w-20 h-6 bg-cyellow2"></div>
+                      <li class="text-left w-1/5">
+                        <div class="lg:w-20 h-6 bg-cyellow2"></div>
                         <span class="-ml-2">20</span>
                       </li>
-                      <li class="text-left">
-                        <div class="w-16 lg:w-20 h-6 bg-cyellow1"></div>
+                      <li class="text-left w-1/5">
+                        <div class="lg:w-20 h-6 bg-cyellow1"></div>
                         <span class="-ml-2">40</span>
                       </li>
-                      <li class="text-left">
-                        <div class="w-16 lg:w-20 h-6 bg-cgreen2"></div>
+                      <li class="text-left w-1/5">
+                        <div class="lg:w-20 h-6 bg-cgreen2"></div>
                         <span class="-ml-2">60</span>
                       </li>
-                      <li class="text-left">
-                        <div class="w-16 lg:w-20 h-6 bg-cgreen1"></div>
+                      <li class="text-left w-1/5">
+                        <div class="lg:w-20 h-6 bg-cgreen1"></div>
                         <span class="-ml-2">80</span>
                         <div class="float-right">100</div>
                       </li>
                     </ul>
                   </div>
-                  <div class="lg:w-1/3 lg:text-right">
-                    <ul class="list-none inline-flex uppercase text-sm pr-10">
-                      <li class="text-center">
-                        <div class="w-16 h-6 bg-cteal3"></div>
+                  <div class="lg:w-1/2 lg:text-right">
+                    <ul class="list-none flex uppercase text-sm px-10">
+                      <li class="text-center w-1/3">
+                        <div class="h-6 bg-cteal3"></div>
                         Low
                       </li>
-                      <li class="text-center">
-                        <div class="w-16 h-6 bg-cteal2"></div>
+                      <li class="text-center w-1/3">
+                        <div class="h-6 bg-cteal2"></div>
                         Med
                       </li>
-                      <li class="text-center">
-                        <div class="w-16 h-6 bg-cteal1"></div>
+                      <li class="text-center w-1/3">
+                        <div class="h-6 bg-cteal1"></div>
                         High
                       </li>
                     </ul>
                   </div>
                 </div>
+
               </div>
             </div>
             <div class="pt-4 lg:w-1/5 lg:px-4 lg:pt-0">
