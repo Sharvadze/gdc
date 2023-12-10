@@ -678,6 +678,17 @@
       $('#report-menu').on('click', function() {
         $('#navbar-report').toggleClass('hidden');
       });
+
+      $(window).scroll(function() {
+          let scrollYpos = $(document).scrollTop();
+          $("#report-menu, #navbar-report").removeClass('top-28');
+
+          if (scrollYpos < 80) {
+              $("#report-menu, #navbar-report").css({'top': '110px'});
+          } else {
+              $("#report-menu, #navbar-report").css({'top': '10px'});
+          }
+      });
     </script>
   </body>
 </html>
